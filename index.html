@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-firestore.js"></script>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+
+        <h1>Cloud Cafe</h1>
+
+        <div class="content">
+
+            <form id="add-cafe-form">
+                <input type="text" name="name" placeholder="cafe name:">
+                <input type="text" name="city" placeholder="cafe city">
+                <button>Add Cafe</button>
+            </form>
+
+            <ul id="cafe-list"></ul>
+
+        </div>
+
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script>
+            var firebaseConfig = {
+                apiKey: "AIzaSyDo35UuKlkMwRDFmI4lm3VJd-O1UrrgxuQ",
+                authDomain: "fatih-firestore.firebaseapp.com",
+                projectId: "fatih-firestore",
+                storageBucket: "fatih-firestore.appspot.com",
+                messagingSenderId: "79755907499",
+                appId: "1:79755907499:web:8cecec055ed00f14d342ee"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            const db = firebase.firestore();
+            db.settings({ timestampsInSnapshots: true });
+        </script>
+        <script src="app.js"></script>
+    </body>
+</html>
